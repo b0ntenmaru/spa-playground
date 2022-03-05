@@ -9,6 +9,13 @@
       checked: {{ state.name }} <br />
       <TextField v-model="state.name" />
     </div>
+
+    <div>
+      names: {{ state.names }} <br />
+      <Checkbox v-model="state.names" value-text="hiroaki" />
+      <Checkbox v-model="state.names" value-text="yukari" />
+      <Checkbox v-model="state.names" value-text="nanaka" />
+    </div>
   </div>
 </template>
 
@@ -16,12 +23,14 @@
 import { defineComponent, reactive } from 'vue';
 import Editor from '@/components/home/Editor.vue';
 import TextField from '@/components/home/TextField.vue';
+import Checkbox from '@/components/home/Checkbox.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
     Editor,
     TextField,
+    Checkbox,
   },
 
   setup() {
