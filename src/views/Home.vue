@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <div>
+    <!-- <div>
       text: {{ state.text }}
       <Editor v-model="state.text" @submit="submit" />
-    </div>
+    </div> -->
 
     <div>
-      checked: {{ state.name }} <br />
-      <TextField v-model="state.name" />
+      name: {{ state.name }} <br />
+      <Child v-model="state.name" />
     </div>
 
     <div>
@@ -22,14 +22,14 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
 import Editor from '@/components/home/Editor.vue';
-import TextField from '@/components/home/TextField.vue';
+import Child from '@/components/home/Child.vue';
 import Checkbox from '@/components/home/Checkbox.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    Editor,
-    TextField,
+    // Editor,
+    Child,
     Checkbox,
   },
 
